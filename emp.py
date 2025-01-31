@@ -10,8 +10,12 @@ def attendance():
 def wage_calculator():
     wage_per_hour=20
     full_day_hour=8
+    part_time_hour=4
     daily_wage=wage_per_hour*full_day_hour
+    part_time_wage=wage_per_hour*part_time_hour
     print("The daily wage of the employee is ", daily_wage)
+    print("The part time wage of the employee is ", part_time_wage)
+
     
 print("Welcome to Employee Wage Computation")
 attendance()
