@@ -5,7 +5,8 @@ def attendance():
     global absent
     present=0
     absent=0
-    for i in range(20):
+    total_days=20
+    for i in range(total_days):
         random_checker=random.randint(0,1)
         if random_checker==1:
             present+=1
@@ -13,6 +14,10 @@ def attendance():
             absent+=1
 
 def wage_calculator():
+    global full_day_hour
+    global part_time_hour
+    global total_hour
+    full_day_hour=0
     daily_wage=0
     part_time_wage=0
     part_time=0
@@ -39,6 +44,14 @@ def wage_calculator():
                 per_day_wage=wage_per_hour*part_time_hour
                 part_time_wage+=per_day_wage
                 part_time+=1
+            case default:
+                pass
+
+        total_hour=0        
+        total_hour=(part_time*part_time_hour)+(full_time*full_day_hour)
+        if total_hour>=100:
+            print("Total working hours reached")
+            break
 
     print(f"Total working days are {present+absent}")
     print(f"The number of days the employee was present is {present}")
