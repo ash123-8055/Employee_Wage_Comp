@@ -15,6 +15,13 @@ class Employee:
         self.full_time=0
     
     def attendance(self):
+        """Description: 
+            This function uses random module to give attendance
+           Parameter:
+            self: Object
+           Return:
+            Prints if the employee is present or absent"""
+
         for i in range(self.total_days):
             random_checker=random.randint(0,1)
             if random_checker==1:
@@ -23,6 +30,13 @@ class Employee:
                 self.absent+=1
 
     def wage_calculator(self):
+        """Description: 
+            This function is used to calculate the wages of employee
+           Parameter:
+            self: object
+           Return:
+            Prints the daily wage and part time wage of employee"""
+
         for i in range(self.present):
             random_checker=random.randint(0,1)
             if random_checker==1:
@@ -62,8 +76,8 @@ class Employee:
 total_days=int(input("Enter the total number of days: "))
 full_day_hour=int(input("Enter the number of hours for full time: "))
 part_time_hour=int(input("Enter the number of hours for part time: "))
-wage_per_hour=int(input("Enter the wage per hour for full time: "))
+wage_per_hour=int(input("Enter the wage per hour: "))
 print("Welcome to Employee Wage Computation")
-emp=Employee(total_days,full_day_hour,part_time_hour,wage_per_hour)
-emp.attendance()
-emp.wage_calculator()
+emp_one=Employee(total_days,full_day_hour,part_time_hour,wage_per_hour)
+emp_one.attendance()
+emp_one.wage_calculator()
