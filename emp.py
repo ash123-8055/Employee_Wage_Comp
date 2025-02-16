@@ -1,6 +1,13 @@
 import random 
 
 def attendance():
+    """Description: 
+        This function uses random module to give attendance
+       Parameter:
+        None
+       Return:
+        Prints if the employee is present or absent"""
+
     random_checker=random.randint(0,1)
     if random_checker==1:
         print("The Employee is present")
@@ -8,6 +15,13 @@ def attendance():
         print("The Employee is absent")
 
 def wage_calculator():
+     """Description: 
+        This function is used to calculate the wages of employee
+       Parameter:
+        None
+       Return:
+        Prints the daily wage and part time wage of employee"""
+
     wage_per_hour=20
     full_day_hour=8
     part_time_hour=4
