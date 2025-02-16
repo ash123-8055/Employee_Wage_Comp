@@ -1,5 +1,6 @@
 import random 
 
+
 class Employee:
     def __init__(self,total_days,full_day_hour,part_time_hour,wage_per_hour):
         self.present=0
